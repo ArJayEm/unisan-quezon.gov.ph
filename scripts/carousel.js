@@ -1,4 +1,4 @@
-var slideIndex = 0;
+var slideIndex = 1;
 showSlides();
 
 // Next/previous controls
@@ -14,12 +14,12 @@ function currentSlide(n) {
 function showSlides() {
   var slides = $(".mySlides");
   var dots = $(".dot");
-  slideIndex += 1;
+  //slideIndex += 1;
   slideIndex = slideIndex > slides.length ? 1 : slideIndex;
   slides.hide();
   dots.removeClass("active");
 
   $(".mySlides:eq(" + slideIndex + ")").show();
   $(".dot:eq(" + slideIndex + ")").addClass("active");
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
 }
