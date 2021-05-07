@@ -1,0 +1,218 @@
+html {
+  background-color: #fff;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+}
+
+header {
+  background-color: #1c1c1c;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  color: #fff;
+  z-index: 10;
+}
+
+header img {
+  height: 50px;
+  position: absolute;
+  top: 10;
+}
+
+nav {
+  /* display: table; */
+  margin: 0 auto;
+  padding: 26px;
+  font-family: sans-serif;
+}
+
+nav ul {
+  /* min-width: 696px; */
+  list-style: none;
+  margin: 0;
+  text-align: right;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav a {
+  color: #a2a2a2;
+  text-decoration: none;
+  padding: 0 0 0 30px;
+}
+
+nav a:hover,
+nav a.active {
+  color: #fe0000;
+  /* color: #fff; */
+}
+
+content {
+  background-color: #ccc;
+}
+
+.main-container {
+  height: 100%;
+  border: 1px solid black;
+  padding: 70px;
+  z-index: -1;
+
+  box-sizing: border-box;
+  /* position: relative; */
+  transform-style: inherit;
+  overflow-y: hidden;
+}
+
+.main-container .title {
+  color: #fff;
+  text-shadow: 1px 1px 3px rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-weight: 600;
+  /* text-shadow: 1px 1px 1px #000, 3px 3px 5px #00000082 */
+}
+
+@media screen and (min-width: 200px) {
+}
+
+@media screen and (min-width: 480px) {
+}
+
+@media screen and (min-width: 700px) {
+}
+
+@media screen and (min-width: 990px) {
+}
+
+.content {
+  background-color: white;
+  padding: 10px;
+
+  position: relative;
+}
+
+.main-container {
+  height: 100%;
+  border: 1px solid black;
+  padding: 70px;
+  z-index: -1;
+
+  box-sizing: border-box;
+  /* position: relative; */
+  transform-style: inherit;
+  overflow-y: hidden;
+}
+
+.main-container .title {
+  color: #fff;
+  text-shadow: 1px 1px 3px rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-weight: 600;
+  /* text-shadow: 1px 1px 1px #000, 3px 3px 5px #00000082 */
+}
+
+@media screen and (min-width: 200px) {
+  .main-container .title.large {
+    line-height: 0.4;
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .main-container .title.large {
+    line-height: 0.7;
+    font-size: 60px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .main-container .title.large {
+    line-height: 1.1;
+    font-size: 80px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .main-container .title.large {
+    line-height: 1.5;
+    font-size: 100px;
+  }
+}
+
+.main-container .title.large {
+  padding: 70px 0;
+}
+
+.main-container .title.center {
+  text-align: center;
+}
+
+.main-container .title.left {
+  text-align: left;
+}
+
+.main-container,
+.main-container::before {
+  background: 50% 50% / cover;
+}
+
+.main-container::before {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  content: "";
+  /* position: absolute; */
+  display: block;
+  background-size: cover;
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+}
+
+@media screen and (min-width: 200px) {
+  .main-container p {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .main-container p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .main-container p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .main-container p {
+    font-size: 16px;
+  }
+}
+
+/* Content */
+.main-container .row,
+.main-container .row > .column {
+  padding: 8px;
+}
+
+footer {
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  display: inline-flex;
+}
