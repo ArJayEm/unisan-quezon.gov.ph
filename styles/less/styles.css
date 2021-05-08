@@ -1,3 +1,8 @@
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 html {
   background-color: #fff;
   scroll-behavior: smooth;
@@ -11,8 +16,8 @@ body {
   position: relative;
 }
 header {
-  background-color: #1c1c1c;
   height: 70px;
+  background-color: #1c1c1c;
   position: sticky;
   top: 0;
   color: #fff;
@@ -24,13 +29,14 @@ header img {
   top: 10;
 }
 nav {
+  display: inline-block;
   /* display: table; */
   margin: 0 auto;
   padding: 26px;
   font-family: sans-serif;
 }
 nav ul {
-  /* min-width: 696px; */
+  /* max-width: 696px; */
   list-style: none;
   margin: 0;
   text-align: right;
@@ -48,11 +54,28 @@ nav a.active {
   color: #fe0000;
   /* color: #fff; */
 }
+menu {
+  margin: 0;
+  padding: 0;
+  background-color: #1c1c1c;
+}
+menu ul {
+  list-style: none;
+  margin: 0;
+  width: 100%;
+}
+menu li {
+  padding: 1em;
+}
+menu a {
+  color: #a2a2a2;
+  text-decoration: none;
+  padding: 0 0 0 30px;
+}
 content {
   background-color: #ccc;
 }
 .main-container {
-  height: 100%;
   border: 1px solid black;
   padding: 70px;
   z-index: -1;
@@ -60,6 +83,16 @@ content {
   /* position: relative; */
   transform-style: inherit;
   overflow-y: hidden;
+}
+@media screen and (max-width: 480px) {
+  .main-container {
+    height: 50%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .main-container {
+    height: 100%;
+  }
 }
 .main-container .title {
   color: #fff;
@@ -71,25 +104,25 @@ content {
 .main-container .title.large {
   padding: 70px 0;
 }
-@media screen and (min-width: 200px) {
+@media screen and (max-width: 200px) {
   .main-container .title.large {
     line-height: 0.4;
     font-size: 40px;
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
   .main-container .title.large {
     line-height: 0.7;
     font-size: 60px;
   }
 }
-@media screen and (min-width: 700px) {
+@media screen and (max-width: 700px) {
   .main-container .title.large {
     line-height: 1.1;
     font-size: 80px;
   }
 }
-@media screen and (min-width: 990px) {
+@media screen and (max-width: 990px) {
   .main-container .title.large {
     line-height: 1.5;
     font-size: 100px;
@@ -101,22 +134,22 @@ content {
 .main-container .title.left {
   text-align: left;
 }
-@media screen and (min-width: 200px) {
+@media screen and (max-width: 200px) {
   .main-container p {
     font-size: 10px;
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
   .main-container p {
     font-size: 12px;
   }
 }
-@media screen and (min-width: 700px) {
+@media screen and (max-width: 700px) {
   .main-container p {
     font-size: 14px;
   }
 }
-@media screen and (min-width: 990px) {
+@media screen and (max-width: 990px) {
   .main-container p {
     font-size: 16px;
   }
@@ -125,22 +158,22 @@ content {
 .main-container .row > .column {
   padding: 8px;
 }
-@media screen and (min-width: 200px) {
+@media screen and (max-width: 200px) {
   .main-container .row .column {
     width: 100% !important;
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
   .main-container .row .column {
     width: 50% !important;
   }
 }
-@media screen and (min-width: 700px) {
+@media screen and (max-width: 700px) {
   .main-container .row .column {
     width: 33.3% !important;
   }
 }
-@media screen and (min-width: 990px) {
+@media screen and (max-width: 990px) {
   .main-container .row .column {
     width: 25% !important;
   }
