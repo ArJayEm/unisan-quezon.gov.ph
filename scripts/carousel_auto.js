@@ -1,14 +1,28 @@
 var slideIndex = 0;
 showSlides();
 
+// Next/previous controls
+function plusSlides(n) {
+  slideIndex += n;
+  showSlides();
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  slideIndex = n;
+  showSlides();
+}
+
 function showSlides() {
   var slides = $(".mySlides");
   var dots = $(".dot");
   slides.css("display", "none");
-  slideIndex = slideIndex > slides.length ? 1 : slideIndex + 1;
+  slideIndex++;
+  slideIndex = slideIndex > slides.length ? 1 : slideIndex;
   dots.removeClass("active");
+  console.log(slideIndex);
   $(".mySlides:eq(" + (slideIndex - 1) + ")").css("display", "block");
-  $(".dot:eq(" + (slideIndex - 1) + ")").addClass("display", "block");
+  $(".dot:eq(" + (slideIndex - 1) + ")").addClass("active");
 
   // var i;
   // var slides = document.getElementsByClassName("mySlides");
