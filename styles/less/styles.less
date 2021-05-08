@@ -1,3 +1,23 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+
 html {
   background-color: #fff;
   scroll-behavior: smooth;
@@ -12,8 +32,8 @@ body {
 }
 
 header {
-  background-color: #1c1c1c;
   height: 70px;
+  background-color: #1c1c1c;
   position: sticky;
   top: 0;
   color: #fff;
@@ -27,13 +47,14 @@ header {
 }
 
 nav {
+  display: inline-block;
   /* display: table; */
   margin: 0 auto;
   padding: 26px;
   font-family: sans-serif;
 
   ul {
-    /* min-width: 696px; */
+    /* max-width: 696px; */
     list-style: none;
     margin: 0;
     text-align: right;
@@ -56,6 +77,28 @@ nav {
   }
 }
 
+menu {
+  // display: none !important;
+  margin: 0;
+  padding: 0;
+  background-color: #1c1c1c;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    width: 100%;
+  }
+
+  li {
+  }
+
+  a {
+    color: #a2a2a2;
+    text-decoration: none;
+    padding: 0 0 0 30px;
+  }
+}
+
 content {
   background-color: #ccc;
   // background-color: white;
@@ -64,7 +107,6 @@ content {
 }
 
 .main-container {
-  height: 100%;
   border: 1px solid black;
   padding: 70px;
   z-index: -1;
@@ -73,6 +115,17 @@ content {
   /* position: relative; */
   transform-style: inherit;
   overflow-y: hidden;
+
+  @media screen and (max-width: 200px) {
+  }
+  @media screen and (max-width: 480px) {
+    height: 50%;
+  }
+  @media screen and (max-width: 700px) {
+    height: 100%;
+  }
+  @media screen and (max-width: 990px) {
+  }
 
   .title {
     color: #fff;
@@ -84,22 +137,22 @@ content {
     &.large {
       padding: 70px 0;
 
-      @media screen and (min-width: 200px) {
+      @media screen and (max-width: 200px) {
         line-height: 0.4;
         font-size: 40px;
       }
 
-      @media screen and (min-width: 480px) {
+      @media screen and (max-width: 480px) {
         line-height: 0.7;
         font-size: 60px;
       }
 
-      @media screen and (min-width: 700px) {
+      @media screen and (max-width: 700px) {
         line-height: 1.1;
         font-size: 80px;
       }
 
-      @media screen and (min-width: 990px) {
+      @media screen and (max-width: 990px) {
         line-height: 1.5;
         font-size: 100px;
       }
@@ -115,19 +168,19 @@ content {
   }
 
   p {
-    @media screen and (min-width: 200px) {
+    @media screen and (max-width: 200px) {
       font-size: 10px;
     }
 
-    @media screen and (min-width: 480px) {
+    @media screen and (max-width: 480px) {
       font-size: 12px;
     }
 
-    @media screen and (min-width: 700px) {
+    @media screen and (max-width: 700px) {
       font-size: 14px;
     }
 
-    @media screen and (min-width: 990px) {
+    @media screen and (max-width: 990px) {
       font-size: 16px;
     }
   }
@@ -139,16 +192,16 @@ content {
 
   .row {
     .column {
-      @media screen and (min-width: 200px) {
+      @media screen and (max-width: 200px) {
         width: 100% !important;
       }
-      @media screen and (min-width: 480px) {
+      @media screen and (max-width: 480px) {
         width: 50% !important;
       }
-      @media screen and (min-width: 700px) {
+      @media screen and (max-width: 700px) {
         width: 33.3% !important;
       }
-      @media screen and (min-width: 990px) {
+      @media screen and (max-width: 990px) {
         width: 25% !important;
       }
       &:hover {
