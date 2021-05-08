@@ -49,10 +49,7 @@ nav a.active {
   /* color: #fff; */
 }
 content {
-  /* background-color: #ccc; */
-  background-color: white;
-  padding: 10px;
-  position: relative;
+  background-color: #ccc;
 }
 .main-container {
   height: 100%;
@@ -66,7 +63,7 @@ content {
 }
 .main-container .title {
   color: #fff;
-  text-shadow: 1px 1px 3px rgb(0, 0, 0);
+  text-shadow: 1px 1px 3px #000000;
   text-transform: uppercase;
   font-weight: 600;
   /* text-shadow: 1px 1px 1px #000, 3px 3px 5px #00000082 */
@@ -103,23 +100,6 @@ content {
 }
 .main-container .title.left {
   text-align: left;
-}
-.main-container,
-.main-container::before {
-  background: 50% 50% / cover;
-}
-.main-container::before {
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  content: "";
-  /* position: absolute; */
-  display: block;
-  background-size: cover;
-  transform-origin: center center 0;
-  transform: translateZ(-1px) scale(2);
-  z-index: -1;
 }
 @media screen and (min-width: 200px) {
   .main-container p {
@@ -169,25 +149,42 @@ content {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.24);
 }
+.main-container,
+.main-container::before {
+  background: 50% 50% / cover;
+}
+.main-container::before {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  content: "";
+  /* position: absolute; */
+  display: block;
+  background-size: cover;
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+}
 footer {
   background-color: #1c1c1c;
   color: #fff;
   padding: 20px;
   text-align: center;
-  display: inline-flex;
+  display: block;
 }
 footer .box {
   margin-bottom: 30px;
 }
-footer h3 {
+footer .box h3 {
   color: #fe0000;
   margin: 0;
 }
-footer a {
+footer .box a {
   color: #fff;
   text-decoration: underline;
 }
-footer a:hover {
+footer .box a:hover {
   color: #fe0000;
   text-decoration: none;
 }
