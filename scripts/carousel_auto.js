@@ -1,7 +1,15 @@
-var slideIndex = 0;
+var slideIndex = 1;
 showSlides();
 
 function showSlides() {
+  var slides = $(".mySlides");
+  var dots = $(".dot");
+  slides.css("display", "none");
+  slideIndex = slideIndex > slides.length ? 1 : slideIndex;
+  dots.removeClass("active");
+  $(".mySlides:eq(" + (slideIndex - 1) + ")").css("display", "block");
+  $(".dot:eq(" + (slideIndex - 1) + ")").addClass("display", "block");
+
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
